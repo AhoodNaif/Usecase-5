@@ -7,9 +7,12 @@ df = pd.read_csv("df.csv")
 
 # عرض العنوان
 st.title("وظائف بلا خبرة؟ نعم         (ابدأ رحلتك المهنية اليوم!)")
+# Raw URL of the image from GitHub
+image_url = 'https://raw.githubusercontent.com/AhoodNaif/Usecase-5/main/Screenshot%202024-10-27%20031152.jpg'
 
-image_path = r'C:\Users\ohoud\OneDrive\Desktop\Tuwaiq\Usecase-5\Screenshot 2024-10-27 031152.jpg'
-st.image(image_path, caption='', use_column_width=True)
+# Display the image
+st.image(image_url, caption='Image from GitHub', use_column_width=True)
+
 experience_counts = df['exper'].value_counts().reset_index()
 experience_counts.columns = ['Years of Experience', 'Job Postings']
 
